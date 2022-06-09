@@ -50,3 +50,38 @@
 // someElseArr.push('njutd');
 
 // TODO: ENUMS
+enum statusCode {
+    SUCCESS = 's',
+    IN_PROGRESS = 'p',
+    FAILED = 'f'
+}
+
+const response = {
+    message: 'Pay is successed',
+    statusCode: 's'
+};
+
+// if (response.statusCode === statusCode.SUCCESS) {}
+
+enum SomeEnum {
+    FIRST = 25,
+    SECOND = FIRST + 10,
+}
+
+// console.log(SomeEnum.SECOND);
+
+const compute = (num: number): number => num * 12;
+
+enum SomethingElse {
+    ONE = 3,
+    TWO = compute(ONE),
+}
+
+// console.log(SomethingElse.TWO);
+
+const enum Roles {
+    ADMIN = 1,
+    USER = 2
+}
+
+console.log(Roles.USER);

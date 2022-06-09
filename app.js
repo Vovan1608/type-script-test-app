@@ -35,3 +35,27 @@
 // const someElseArr: ReadonlyArray<string> = ['Dev', 'DevOps'];
 // someElseArr.push('njutd');
 // TODO: ENUMS
+var statusCode;
+(function (statusCode) {
+    statusCode["SUCCESS"] = "s";
+    statusCode["IN_PROGRESS"] = "p";
+    statusCode["FAILED"] = "f";
+})(statusCode || (statusCode = {}));
+const response = {
+    message: 'Pay is successed',
+    statusCode: 's'
+};
+// if (response.statusCode === statusCode.SUCCESS) {}
+var SomeEnum;
+(function (SomeEnum) {
+    SomeEnum[SomeEnum["FIRST"] = 25] = "FIRST";
+    SomeEnum[SomeEnum["SECOND"] = 35] = "SECOND";
+})(SomeEnum || (SomeEnum = {}));
+// console.log(SomeEnum.SECOND);
+const compute = (num) => num * 12;
+var SomethingElse;
+(function (SomethingElse) {
+    SomethingElse[SomethingElse["ONE"] = 3] = "ONE";
+    SomethingElse[SomethingElse["TWO"] = compute(SomethingElse.ONE)] = "TWO";
+})(SomethingElse || (SomethingElse = {}));
+console.log(2 /* Roles.USER */);
