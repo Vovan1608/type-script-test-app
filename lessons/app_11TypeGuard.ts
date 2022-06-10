@@ -16,10 +16,14 @@ interface MyAdmin {
 };
 
 function logIdNew(id: string | number) {
-    if (typeof id === 'string') {
+    if (isString(id)) {
         console.log(id);
     } else {
         console.log(id);
     }
+};
+
+function isString(x: string | number): x is string {
+    return typeof x === 'string';
 }
 

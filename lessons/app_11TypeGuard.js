@@ -7,10 +7,14 @@ const endUser = {
 };
 ;
 function logIdNew(id) {
-    if (typeof id === 'string') {
+    if (isString(id)) {
         console.log(id);
     }
     else {
         console.log(id);
     }
+}
+;
+function isString(x) {
+    return typeof x === 'string';
 }
