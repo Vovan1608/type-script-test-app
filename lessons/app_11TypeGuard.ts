@@ -25,5 +25,16 @@ function logIdNew(id: string | number) {
 
 function isString(x: string | number): x is string {
     return typeof x === 'string';
-}
+};
 
+function isAdmin(user: EndUser | MyAdmin): user is MyAdmin {
+    return 'role' in user;
+};
+
+function setRole(user: EndUser | MyAdmin) {
+    if (isAdmin(user)) {
+        user.role = 0;
+    } else {
+        throw new Error();
+    }
+}
