@@ -8,9 +8,9 @@ var MyPaymentStatus;
 ;
 class MyPayment {
     constructor(id) {
-        this.id = id;
-        this.createdAt = new Date();
         this.status = MyPaymentStatus.HOLDED;
+        this.createdAt = new Date();
+        this.id = id;
     }
     getPaymentLifeTime() {
         return new Date().getTime() - this.createdAt.getTime();
@@ -24,10 +24,8 @@ class MyPayment {
     }
 }
 const payment = new MyPayment(1);
-payment.unholdPayment();
-setTimeout(() => {
-    const time = payment.getPaymentLifeTime();
-    console.log(time);
-}, 2000);
-// const time = payment.getPaymentLifeTime();
 console.log(payment);
+payment.unholdPayment();
+const time = payment.getPaymentLifeTime();
+console.log(time);
+// const time = payment.getPaymentLifeTime();
