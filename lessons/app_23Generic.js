@@ -32,5 +32,23 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         const half = data.length / 2;
         return data.splice(0, half);
     }
-    getArreyHalf([1, 2, 3, 4]);
+    // getArreyHalf([1,2,3,4])
+    const split = getArreyHalf;
+    const logLine = {
+        time: new Date(),
+        data: {
+            a: 1
+        }
+    };
+    class Vehicle {
+    }
+    function kmToMile(vehicle) {
+        vehicle.run = vehicle.run / 0.62;
+        return vehicle;
+    }
+    function getId(id, additionalData) {
+        console.log(id);
+        console.log(additionalData);
+        return { id, additionalData };
+    }
 })();
